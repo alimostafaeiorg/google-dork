@@ -1,0 +1,61 @@
+To search for indexes with inurl, ext, link, site, intitle:
+#openredirect
+inurl:url=https
+inurl:url=http
+inurl:u=https
+inurl:u=http
+inurl:redirect?https
+inurl:redirect?http
+inurl:redirect=https
+inurl:redirect=http
+inurl:link=http
+inurl:link=https
+inurl:redirectUrl=http site:paypal.com
+
+xss:
+site:*.host.com ext:asp
+site:*.host.com ext:jsp
+site:*.host.com ext:aspx
+site:*.host.com ext:jspx
+site:*.host.com ext:do
+site:*.host.com ext:action
+site:*.host.com ext:php
+
+site:your-target.com inurl:id=
+site:your-target.com filetype:php
+site:your-target.com intitle:upload
+inurl:”.php?id=” intext:”View cart”
+inurl:”.php?cid=” intext:”shopping”
+inurl:/news.php?include=
+inurl:”.php?query=”
+
+intitle:”index of” “docker-compose.yaml”
+intitle:”index of” “/.git/config”
+intitle:”index of” “.ssh/authorized_keys”
+inurl:old “index of” “wp-config.php”
+DB_USERNAME filetype:env
+site:*/phpinfo.php intitle:”phpinfo()”
+intext:api_key filetype:log
+inurl:wp-content/debug.log
+intext:”AWSTATS DATA FILE” filetype:txt
+
+
+site: domain.tld inurl:&
+site: domain.tld ext: (php|v|asp|txt|jsp|html|xml|bak)
+site:domain.tld inurl: (unsubscribe|register|feedback|signup|join|contact|profile|user|comment|api|developer|affiliate|upload|mobile|upgrade|password
+site:domain.tld ext:xml | ext:xls | ext:env filetype:env | ext:ppt | ext:atom |ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini
+site:domain.tld ext:sql | ext:dbf | ext:mdb | ext:log
+site:domain.tld ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup
+site:domain.tld inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth
+site: domain.tld ext:doc | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv
+site:domain.tld ext:action | ext:struts | ext:do
+site:domain.tld filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/site
+site:domain.tld filetype:config
+site:*.domain.tld
+site:.domain.tld intitle: "Welcome to Nginx"
+
+inurl:example.com intitle:"index of"
+inurl:example.com intitle:"index of /" "*key.pem"
+inurl:example.com ext:log
+inurl:example.com intitle:"index of" ext:sql|xls|xml|json|csv
+inurl:example.com "MYSQL_ROOT_PASSWORD:" ext:env OR ext:yml -git
